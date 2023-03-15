@@ -1,0 +1,18 @@
+[package]
+name = "guessing_game"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "0.8.5"
+dialoguer_trait = "0.2.0" 
+colorized = "1.0.0"
+isahc = "1.7.2"
+reqwest = { version = "0.11", features = ["json"] } # reqwest with JSON parsing support
+futures = "0.3" # for our async / await blocks
+tokio = { version = "1.12.0", features = ["full"] } # for our async runtime
+colored = "2"
+ansi_colours = "1.1"
+rgb = "0.8"
