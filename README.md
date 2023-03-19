@@ -1,7 +1,7 @@
 # wordle
 
 
-This is a CLI version of wordle. To run it you must have Rust installed. Ensure you have cargo installed with ```cargo --version```. If you don't, [follow the docs to install it](https://www.rust-lang.org/tools/install)
+This is a CLI version of wordle. To run it you must have Rust installed. Ensure you have Rust installed with ```rustc --version```. If you don't, [follow the docs to install it](https://www.rust-lang.org/tools/install)
 
 
 To clone and build the program run the following commands:
