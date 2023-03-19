@@ -1,10 +1,10 @@
 # wordle
 
 
-Build program with ```cargo build```
-Run program with ```cargo run```
-Run program without explainer text with ```cargo run no-help-text```
-```
+1. Build program with ```cargo build```
+2. Run program with ```cargo run```
+3. Run program without explainer text with ```cargo run no-help-text```
+
 
 About the game:
 
