@@ -13,7 +13,6 @@ To clone and build the program run the following commands:
 To run the program run the following commands from the wordle/src directory:
 1. Run program with ```cargo run```
 2. Run program without explainer text with ```cargo run no-help-text```
-<br>  
 <br>
 
 About the game:
