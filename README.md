@@ -1,16 +1,16 @@
 # wordle
 
 
-This is a CLI version of wordle. To run it you must have Rust installed. Ensure you have Rust installed with ```rustc --version```. If you don't, [follow the docs to install it](https://www.rust-lang.org/tools/install)
+This is a CLI version of wordle. To run it you must have Rust installed. Ensure you have Rust installed with ```rustc --version```. If you don't, [follow the docs to install it](https://www.rust-lang.org/tools/install).
 <br>
 
-To clone and build the program run the following commands:
+To clone and build this program run the following commands:
 1. ```git clone https://github.com/c3pko/wordle.git```
 2. ```cd wordle```
 3. ```cargo build```
 <br>
 
-To run the program run the following commands from the wordle/src directory:
+To run this program run the following commands from the wordle/src directory:
 1. Run program with ```cargo run```
 2. Run program without explainer text with ```cargo run no-help-text```
 <br>
