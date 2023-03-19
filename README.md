@@ -1,9 +1,9 @@
 # wordle
 
-```
-Build program with "cargo build"
-Run program with "cargo run"
-Run program without explainer text with "cargo run no-help-text"
+
+Build program with ```cargo build```
+Run program with ```cargo run```
+Run program without explainer text with ```cargo run no-help-text```
 ```
 
 About the game:
