@@ -12,31 +12,40 @@ use colored::*; //https://github.com/mackwic/colored
 use std::fs;
 use isahc::ReadResponseExt;
 use std::path::Path;
-// use crate::io::BufReader;
-// use crate::fs::File;
 use reqwest;
 use reqwest::Client;
 use tokio::main;
 use ansi_colours::*;
 use rgb::*;
+use std::env;
+use itertools::Itertools; // 0.8.2
 
 // #[derive(Copy, Clone)]
 struct FiveLetterDictionary {
     dictionary: Vec<String>,
 }
 
-// #[derive(Clone)]
+struct Config {
+    query: String,
+    file_path: String,
+}
+
+
+#[derive(Clone)]
 struct UserGuess {
-    length: usize,
     word: String,
+    word_vec: Vec<char>,
+    length: usize,
     real_word: bool,
     guessed_wordle: bool,
+    print_comparison: Vec<char>
 }
 
 impl UserGuess {
-    fn reset_user_guess_struct(guess: &mut UserGuess, word_length: usize, user_word: String, real: bool, guessed_word: bool) {
-        guess.length = word_length;
+    fn reset_user_guess_struct(guess: &mut UserGuess, user_word: String, word_length: usize, real: bool, guessed_word: bool) {
         guess.word = user_word.to_string();
+        guess.word_vec = user_word.chars().collect();
+        guess.length = word_length;
         guess.real_word = real;
         guess.guessed_wordle = guessed_word;
     }
@@ -48,10 +57,7 @@ impl UserGuess {
 
         let mut counter: i32 = 0;
         let mut users_guess = String::new();
-        let mut user_needs_to_guess_again = true;
-
-        println!("You have {} guesses remaining. Please enter your 5 letter guess below: ", user_guesses_remaining);
-        
+        let mut user_needs_to_guess_again = true;        
         //check that users_guess is a five letter real word in the English dictionary, otherwise keep prompting for a real five letter word
         while user_needs_to_guess_again == true {
             // println!("counter = {:?}", counter);
@@ -72,14 +78,14 @@ impl UserGuess {
                 .read_line(&mut input)
                 .expect("Failed to read line");
 
-            let users_input = input.trim().to_string(); //this is a String
+            let intermediate_input = input.trim().to_string(); //this is a String
+            let users_input = intermediate_input.to_uppercase();
 
-            // println!("Your guess: {:?}", users_input);
             let mut users_input_len = users_input.len();
             // let mut bytes_to_take = cmp::min(users_input.len(),5); //if users guess > 5 letters, only take first 5
             // let mut users_guess = &users_input[..bytes_to_take].to_string(); //slice to get first five letters of guess and convert to String
             FiveLetterDictionary::check_real_word(users_guess_struct, users_input.clone().to_string());
-            let mut new_struct = Self::reset_user_guess_struct(users_guess_struct, users_input_len, users_input.to_string(), users_guess_struct.real_word, false);
+            let mut new_struct = Self::reset_user_guess_struct(users_guess_struct, users_input.to_string(), users_input_len, users_guess_struct.real_word, false);
             if users_guess_struct.length != 5 || users_guess_struct.real_word == false {
                 Self::print_error_messages(&users_guess_struct, users_input.to_string());
             }
@@ -108,7 +114,6 @@ impl UserGuess {
 
     fn get_five_char_word_second_way(user_guesses_remaining: i32) -> String {
 
-        println!("You have {} guesses remaining. Please enter your 5 letter guess below: ", user_guesses_remaining);
         let mut input = String::new();
         let mut buffer = [0;5];
         let mut buf = vec![0u8; 5];
@@ -130,55 +135,30 @@ impl UserGuess {
         return users_guess
     }
 
-    fn user_wins_message(users_guess_vec:Vec<char>, user_guesses: i32) {
 
-        println!("Comparing your guess to the wordle: ");
-        println!("___________");
-        for (index, element) in users_guess_vec.iter().enumerate() {
-            print!("|");
-            let mut users_guess_char: String = String::from(users_guess_vec[index]);
-            print!("{}", users_guess_char.color(Colors::BrightGreenBg)); 
-        }
-        print!("|");
-        println!("\n-----------");
-        println!("\nGreat job you guessed the wordle in {} guesses!\n", user_guesses);
-
-    }
-
-    fn print_comparison(mut comparison_array: Vec<char>, users_guess_vec: Vec<char>) {
-
-        println!("Comparing your guess to the wordle: ");
-
-        println!("___________");
-        for (index, element) in comparison_array.iter_mut().enumerate() {
+    fn print_comparison(comparison_array: Vec<char>, users_guess_vec: Vec<char>) {
+        for (index, element) in comparison_array.iter().enumerate() {
             let mut users_guess_char: String = String::from(users_guess_vec[index]);
             print!("|");
             if *element == 'G' {
-                // users_guess_char.color(Colors::GreenBg);
-                // users_guess_char.color(Colors::WhiteFg);
-                // print!("{}", users_guess_char.color(Colors::BrightGreenBg, Colors::BrightWhiteFg));
-                print!("{}", users_guess_char.black().bold().on_green());
-                // print!("{}", users_guess_char.black().green(153,255,153));
+                print!("{}", users_guess_char.color(Colors::BrightGreenBg));
+                // print!("{}", users_guess_char.black().on_green());
             }
             if *element == 'Y' {
-                // print!("{}", users_guess_char.color(Colors::BrightYellowBg));
-                // print!("{}", users_guess_char.color(Colors::BrightYellowBg, Colors::BrightWhiteFg));
-                // println!("This is with color:  {} {}", users_guess_char.color(Colors::WhiteFg),  users_guess_char.color(Colors::YellowBg));
-                print!("{}", users_guess_char.black().bold().on_yellow());
+                print!("{}", users_guess_char.color(Colors::BrightYellowBg));
+                // print!("{}", users_guess_char.black().on_yellow());
             }
             if *element == 'B' {
                 // print!("{}", users_guess_char.color(Colors::BrightBlackBg));
-                // print!("{}", users_guess_char.color(Colors::BrightBlackBg, Colors::BrightWhiteFg));
-                // println!("This is with color:  {} {}", users_guess_char.color(Colors::WhiteFg),  users_guess_char.color(Colors::BlackBg));
-                print!("{}", users_guess_char.white().bold().on_black());
+                print!("{}", users_guess_char.white().on_black());
             }
         }
-        print!("|");
-        println!("\n-----------\n");
-
+        print!("|\n");
     }
 
-    fn compare_words(users_guess_struct: &mut UserGuess, wordle_word:String, user_guesses: i32) -> bool {
+
+    fn compare_words(user_guess_dictionary: &mut HashMap<i32, UserGuess>, users_guess_struct: &mut UserGuess, wordle_word:String, user_guesses: i32) -> bool {        
+        
         let mut users_guess = &users_guess_struct.word;
         let mut user_guessed_word = false;
         
@@ -187,13 +167,7 @@ impl UserGuess {
         let initalizing = String::from("BBBBB");
         let mut comparison_array: Vec<char> = initalizing.chars().collect();
         let mut char_counter_hashmap = HashMap::new();
-        
-        if users_guess_vec ==  wordle_word_vec {
-            Self::user_wins_message(users_guess_vec, user_guesses);
-            users_guess_struct.guessed_wordle = true;
-            user_guessed_word = true;
-            return user_guessed_word;
-        }
+        let mut counter: i32 = 0;
 
         for (index, element) in wordle_word_vec.iter().enumerate() {
             if wordle_word_vec[index] == users_guess_vec[index] {
@@ -201,6 +175,7 @@ impl UserGuess {
                 comparison_array[index] = 'G';
             }
             else {
+                counter+=1;
                 //increment or add char to hashmap
                 //*char_counter_hashmap.entry(&wordle_word_vec[index]).or_insert(1) +=1;
                 match char_counter_hashmap.get(&wordle_word_vec[index]) {
@@ -209,10 +184,14 @@ impl UserGuess {
                 }
             }
         }
+        if counter == 0 {
+            users_guess_struct.guessed_wordle = true;
+            user_guessed_word = true;
+        }
+
 
         //iterate through non-matched elements and check if user word contains any of those chars
         //if yes, decrement hashmap counter and continue through word
-
         for (index, element) in comparison_array.iter_mut().enumerate() {
             if *element != 'G' {
                 let mut char_to_check = users_guess_vec[index];
@@ -234,9 +213,20 @@ impl UserGuess {
             }
         }
 
-        Self::print_comparison(comparison_array, users_guess_vec);
-        return user_guessed_word;
+        users_guess_struct.print_comparison = comparison_array;
+        user_guess_dictionary.insert(user_guesses,users_guess_struct.clone());
 
+        //print previous guesses then latest guess
+        for (key, user_guess_struct) in user_guess_dictionary.iter().sorted_by_key(|x| x.0) {
+            let comparison_array = &user_guess_struct.print_comparison;
+            let users_guess_vec = &user_guess_struct.word_vec;
+            UserGuess::print_comparison(comparison_array.to_vec(), users_guess_vec.to_vec());
+        }
+  
+        if user_guessed_word==true {
+            println!("\nGreat job you guessed the wordle in {} guesses!\n", user_guesses);
+        }
+        return user_guessed_word;
     }
 }
 
@@ -246,27 +236,32 @@ fn hello_prompt() {
     let yellow = String::from("yellow");
     let black = String::from("black");
 
-    let example_users_guess = String::from("shear");
+    let initalizing = String::from("BBBBB");
+    let example_users_guess = String::from("SHEAR");
     let mut test_struct = UserGuess {
         word: String::from(example_users_guess.clone()),
+        word_vec: example_users_guess.chars().collect(),
         length: example_users_guess.len(),
         real_word: true,
         guessed_wordle: false,
+        print_comparison: initalizing.chars().collect(),
     };
+    let mut user_guess_dictionary: HashMap<i32, UserGuess> = HashMap::with_capacity(6);
 
-    let example_wordle = String::from("where");
+    let example_wordle = String::from("WHERE");
     let example_guess_vec: Vec<char> = example_users_guess.chars().collect();
     let example_wordle_vec: Vec<char> = example_wordle.chars().collect();
     let one_guess: i32 = 1;
 
     println!("Welcome to the poor man's version of wordle: where the words aren't random and the points are all made up!\n");
-    println!("You have 6 guesses to guess the 5 letter word of the day. You will get color coded feedback on each guess like so:");
-    println!("If you guess the right character in the right place your character will be printed as {}", green.color(Colors::GreenFg));
-    println!("If you guess the right character in the wrong place your character will be printed as {}", yellow.color(Colors::YellowFg));
-    println!("Otherwise, your character will be printed as {}", black.color(Colors::BlackFg));
-    println!("\nFor example, if you guess 'shear' and the wordle is 'where' you will see: ");
-    let user_guessed_word = UserGuess::compare_words(&mut test_struct, example_wordle, one_guess);
-    println!("This means 'h' and 'e' are correctly placed, 's' and 'a' are not in the wordle, and 'r' is in the wordle but not in the fifth position.");
+    println!("You have 6 tries to guess the 5 letter word of the day. You will get color coded feedback on each guess like so:");
+    println!("A correctly guessed character will be printed as {}", green.color(Colors::BrightGreenBg));
+    println!("A correctly guessed character in the wrong place will be printed as {}", yellow.color(Colors::BrightYellowBg));
+    println!("All other characters will be printed as {}", black.white().on_black());
+    println!("\nFor example, if you guess 'SHEAR' and the wordle is 'WHERE' you will see: ");
+    let user_guessed_word = UserGuess::compare_words(&mut user_guess_dictionary, &mut test_struct, example_wordle, one_guess);
+    println!("\nThis tells you: ");
+    println!("'H' and 'E' are correctly placed, 'S' and 'A' are not in the wordle, and 'R' is in the wordle but not in the right position.");
     println!("Now that you know the rules, let's play!\n\n");
 
 }
@@ -283,7 +278,7 @@ impl FiveLetterDictionary {
     }
 
     fn get_wordle_dictionary() -> Vec<String> {
-        let lines = Self::read_words_from_file("dictionary.txt");
+        let lines = Self::read_words_from_file("wordle_dictionary.txt");
         let mut word_dictionary = FiveLetterDictionary {
             dictionary: lines,
         };
@@ -319,7 +314,8 @@ impl FiveLetterDictionary {
             .text_with_charset("utf-8")
             .await;
         let t = response.unwrap(); //this is a string
-        Self::write_to_file(&t);
+        let upper_case_wordle_word = t.to_uppercase();
+        Self::write_to_file(&upper_case_wordle_word);
     }
 
     fn check_real_word(users_guess_struct: &mut UserGuess, word_to_check: String) {
@@ -346,11 +342,14 @@ fn tests() {
 fn test_real_words() {
     let words_to_check = ["one", "fiver", "steam", "liven", "barren", "boxey"];
 
+    let initalizing = String::from("BBBBB");
     let mut users_guess_struct = UserGuess {
         word: String::from(""),
+        word_vec: String::from("").chars().collect(),
         length: 0,
         real_word: false,
         guessed_wordle: false,
+        print_comparison: initalizing.chars().collect(),
     };
     
     for (index, element) in words_to_check.iter().enumerate() {
@@ -367,32 +366,54 @@ fn test_real_words() {
 
 
 // #[tokio::main]
-// async fn main() {
+// async fn create_dictionary() {
+//     FiveLetterDictionary::get_new_words().await
+// }
+
+
+impl Config {
+    fn new(args: &[String]) {
+        if args.len() > 1 {
+            let query = args[1].clone();
+            if query == "no-help-text" {
+                println!("Welcome to Wordle\n");
+            }
+        }
+        else {
+            hello_prompt();
+        } 
+    }
+}
 fn main() {
 
-    let wordle_word = FiveLetterDictionary::generate_wordle();
-    // println!("wordle word = {:?}", wordle_word);
-    
-    // let mut user_guessed_wordle: bool = false;
+    let args: Vec<String> = env::args().collect();
+    let config = Config::new(&args);
+    let mut wordle_word = FiveLetterDictionary::generate_wordle();   
     let mut user_guesses: i32 = 0;
     let mut user_guesses_remaining: i32 = 6;
-
+    let mut user_guess_dictionary: HashMap<i32, UserGuess> = HashMap::with_capacity(6);
+    let initalizing = String::from("BBBBB");
     let mut users_guess_struct = UserGuess {
         word: String::from(""),
+        word_vec: String::from("").chars().collect(),
         length: 0,
         real_word: false,
         guessed_wordle: false,
+        print_comparison: initalizing.chars().collect(),
     };
 
-    //add cmd arg to bypass hello prompt
-    hello_prompt();
-    while user_guesses_remaining > 0  && users_guess_struct.guessed_wordle == false {
-        // println!("user_guessed_wordle at top: {}", users_guess_struct.guessed_wordle);
-        let temp = UserGuess::get_five_char_word(&mut users_guess_struct, user_guesses_remaining);
-        let user_won = UserGuess::compare_words(&mut users_guess_struct, wordle_word.clone(), user_guesses);
+    while user_guesses_remaining > 0  && users_guess_struct.guessed_wordle.clone() == false {
+        println!("Guesses Remaining: {}. Enter your guess: ", user_guesses_remaining);
         user_guesses_remaining-=1;
         user_guesses+=1;
+        let temp = UserGuess::get_five_char_word(&mut users_guess_struct, user_guesses_remaining);
+        // user_guess_dictionary.insert(user_guesses, users_guess_struct.word.clone(), users_guess_struct.print_comparison.clone());
+        let user_won = UserGuess::compare_words(&mut user_guess_dictionary, &mut users_guess_struct, wordle_word.clone(), user_guesses);
+        // user_guess_dictionary.insert(user_guesses,users_guess_struct.clone());
+        
     }
-    println!("Thanks for playing!");
+    if users_guess_struct.guessed_wordle == false {
+        println!("Thanks for playing! Better luck next time \n");
+    }
  
 }
