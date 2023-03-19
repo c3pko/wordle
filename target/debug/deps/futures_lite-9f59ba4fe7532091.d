@@ -1,0 +1,11 @@
+/Users/ekuzmenko/rust-projects/wordle/target/debug/deps/futures_lite-9f59ba4fe7532091.rmeta: /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/lib.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/future.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/prelude.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/stream.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/io.rs
+
+/Users/ekuzmenko/rust-projects/wordle/target/debug/deps/libfutures_lite-9f59ba4fe7532091.rlib: /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/lib.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/future.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/prelude.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/stream.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/io.rs
+
+/Users/ekuzmenko/rust-projects/wordle/target/debug/deps/futures_lite-9f59ba4fe7532091.d: /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/lib.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/future.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/prelude.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/stream.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/io.rs
+
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/lib.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/future.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/prelude.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/stream.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-lite-1.12.0/src/io.rs:

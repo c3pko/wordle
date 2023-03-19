@@ -1,0 +1,12 @@
+/Users/ekuzmenko/rust-projects/wordle/target/release/deps/httparse-fa336ae60b8135f5.rmeta: /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/lib.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/iter.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/macros.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/simd/mod.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/simd/sse42.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/simd/avx2.rs
+
+/Users/ekuzmenko/rust-projects/wordle/target/release/deps/libhttparse-fa336ae60b8135f5.rlib: /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/lib.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/iter.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/macros.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/simd/mod.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/simd/sse42.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/simd/avx2.rs
+
+/Users/ekuzmenko/rust-projects/wordle/target/release/deps/httparse-fa336ae60b8135f5.d: /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/lib.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/iter.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/macros.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/simd/mod.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/simd/sse42.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/simd/avx2.rs
+
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/lib.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/iter.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/macros.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/simd/mod.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/simd/sse42.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.8.0/src/simd/avx2.rs:

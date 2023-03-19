@@ -1,0 +1,13 @@
+/Users/ekuzmenko/rust-projects/wordle/target/release/deps/url-8a6b1747cd65ca45.rmeta: /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/lib.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/host.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/origin.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/parser.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/path_segments.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/slicing.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/quirks.rs
+
+/Users/ekuzmenko/rust-projects/wordle/target/release/deps/liburl-8a6b1747cd65ca45.rlib: /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/lib.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/host.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/origin.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/parser.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/path_segments.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/slicing.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/quirks.rs
+
+/Users/ekuzmenko/rust-projects/wordle/target/release/deps/url-8a6b1747cd65ca45.d: /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/lib.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/host.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/origin.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/parser.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/path_segments.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/slicing.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/quirks.rs
+
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/lib.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/host.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/origin.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/parser.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/path_segments.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/slicing.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.3.1/src/quirks.rs:

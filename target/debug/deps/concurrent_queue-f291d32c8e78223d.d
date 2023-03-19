@@ -1,0 +1,11 @@
+/Users/ekuzmenko/rust-projects/wordle/target/debug/deps/concurrent_queue-f291d32c8e78223d.rmeta: /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/lib.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/bounded.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/single.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/unbounded.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/sync.rs
+
+/Users/ekuzmenko/rust-projects/wordle/target/debug/deps/libconcurrent_queue-f291d32c8e78223d.rlib: /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/lib.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/bounded.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/single.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/unbounded.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/sync.rs
+
+/Users/ekuzmenko/rust-projects/wordle/target/debug/deps/concurrent_queue-f291d32c8e78223d.d: /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/lib.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/bounded.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/single.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/unbounded.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/sync.rs
+
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/lib.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/bounded.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/single.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/unbounded.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/concurrent-queue-2.1.0/src/sync.rs:

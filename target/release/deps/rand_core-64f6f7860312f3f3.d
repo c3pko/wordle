@@ -1,0 +1,12 @@
+/Users/ekuzmenko/rust-projects/wordle/target/release/deps/rand_core-64f6f7860312f3f3.rmeta: /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/lib.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/block.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/error.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/impls.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/le.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/os.rs
+
+/Users/ekuzmenko/rust-projects/wordle/target/release/deps/librand_core-64f6f7860312f3f3.rlib: /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/lib.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/block.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/error.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/impls.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/le.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/os.rs
+
+/Users/ekuzmenko/rust-projects/wordle/target/release/deps/rand_core-64f6f7860312f3f3.d: /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/lib.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/block.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/error.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/impls.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/le.rs /Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/os.rs
+
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/lib.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/block.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/error.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/impls.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/le.rs:
+/Users/ekuzmenko/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/os.rs:
