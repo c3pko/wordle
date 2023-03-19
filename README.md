@@ -9,12 +9,14 @@ To clone and build the program run the following commands:
 2. ```cd wordle```
 3. ```cargo build```
   
-  
+    
+    
 To run the program run the following commands from the wordle/src directory:
 1. Run program with ```cargo run```
 2. Run program without explainer text with ```cargo run no-help-text```
   
-  
+    
+    
 About the game:
 
 Welcome to the poor man's CLI version of wordle: where the words aren't random and the points are all made up!
