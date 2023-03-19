@@ -2,7 +2,7 @@
 
 
 This is a CLI version of wordle. To run it you must have Rust installed. Ensure you have Rust installed with ```rustc --version```. If you don't, [follow the docs to install it](https://www.rust-lang.org/tools/install)
-
+<br>
 
 To clone and build the program run the following commands:
 1. ```git clone https://github.com/c3pko/wordle.git```
